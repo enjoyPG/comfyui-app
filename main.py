@@ -38,8 +38,6 @@ def get_styled_prompt(style_name: str, base_prompt: str) -> str:
 
 def save_input_image(image):
     input_image = f"{COMFYUI_PATH}/input/sample_sketch.png"
-    with open('./data.p', 'wb') as fp:
-        pickle.dump(image, fp, protocol=pickle.HIGHEST_PROTOCOL)
     pillow_image = Image.fromarray(np.array(image["composite"]))
     pillow_image.save(input_image)
 
@@ -111,4 +109,4 @@ demo = gr.Interface(
 if __name__ == "__main__":
 
     demo.queue()
-    demo.launch()
+    demo.launch(share=True)
