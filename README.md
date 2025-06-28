@@ -22,6 +22,7 @@ Configure `settings.py`:
 SERVER_ADDRESS = "127.0.0.1:8000" # running ip
 COMFYUI_PATH = "/path/to/ComfyUI" # path to your installed ComfyUI
 ```
+만들어진 사진 이름 변경
 
 Finally, simple run: 
 ```bash
